@@ -51,5 +51,5 @@ delete from tbJogos where codigo = 2;
 delete from tbJogos where codigo = 4;
 delete from tbJogos where codigo = 8;
 
--- Visualizando os registros excluídos
+-- Visualizar os registros excluídos
 select * from tbJogos;
