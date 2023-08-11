@@ -95,3 +95,4 @@ select * from tbFornecedores;
 select * from tbUsuarios;
 select * from tbProdutos;
 select * from tbVendas;
+
