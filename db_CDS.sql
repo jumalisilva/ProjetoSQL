@@ -16,7 +16,7 @@ nomeGrav varchar(50) not null unique,
 primary key(codGrav)
 );
 
-create table tbCategorias (
+create table tbCategorias(
 codCat int not null,
 nomeCat varchar(50) not null unique,
 primary key(codCat)
