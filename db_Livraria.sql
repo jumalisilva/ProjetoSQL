@@ -106,16 +106,16 @@ insert into tbCliente(idCliente,nome,telefone)values(10,'Julio Verne','(11)92118
 
 select * from tbCliente where nome like '%c%';
 
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(1,1,'O Cemitério',33.92,100);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(2,3,'Harry Potter e a Pedra Filosofal',50.00,150);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(3,9,'Game of Thrones',80.00,87);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(4,7,'Tudo é rio',41.99,30);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(5,10,'Morte no Nilo',49.90,43);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(6,4,'Memórias póstumas de Brás Cubas',37.90,100);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(7,2,'Fazendo meu filme: volume 1',26.09,120);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(8,6,'A hora da estrela',24.99,45);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(9,5,'Capitães da areia',36.83,450);
-insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(10,8,'Educação e Mudança',49.90,94);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(100,1,'O Cemitério',33.92,100);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(200,2,'Fazendo meu filme: volume 1',26.09,120);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(300,3,'Harry Potter e a Pedra Filosofal',50.00,150);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(400,4,'Memórias póstumas de Brás Cubas',37.90,100);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(500,5,'Capitães da areia',36.83,450);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(600,6,'A hora da estrela',24.99,45);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(700,7,'Tudo é rio',41.99,30);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(800,8,'Educação e Mudança',49.90,94);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(900,9,'Game of Thrones',80.00,87);
+insert into tbLivro(idLivro,idGenero,titulo,preco,estoque)values(1000,10,'Morte no Nilo',49.90,43);
 
 select * from tbLivro order by idGenero desc;
 
@@ -132,76 +132,32 @@ insert into tbVenda(idVenda,idCliente,data,total)values(2,7,'2023/08/22',49.90);
 
 select * from tbVenda order by idVenda asc limit 5;
 
-insert into tbEscreve(idLivro,idAutor)values(10,8);
-insert into tbEscreve(idLivro,idAutor)values(7,2);
-insert into tbEscreve(idLivro,idAutor)values(2,3);
-insert into tbEscreve(idLivro,idAutor)values(6,5);
-insert into tbEscreve(idLivro,idAutor)values(1,1);
-insert into tbEscreve(idLivro,idAutor)values(5,4);
-insert into tbEscreve(idLivro,idAutor)values(3,7);
-insert into tbEscreve(idLivro,idAutor)values(4,9);
-insert into tbEscreve(idLivro,idAutor)values(9,10);
-insert into tbEscreve(idLivro,idAutor)values(8,6);
+insert into tbEscreve(idLivro,idAutor)values(1000,4);
+insert into tbEscreve(idLivro,idAutor)values(700,9);
+insert into tbEscreve(idLivro,idAutor)values(200,2);
+insert into tbEscreve(idLivro,idAutor)values(600,6);
+insert into tbEscreve(idLivro,idAutor)values(100,1);
+insert into tbEscreve(idLivro,idAutor)values(500,10);
+insert into tbEscreve(idLivro,idAutor)values(300,3);
+insert into tbEscreve(idLivro,idAutor)values(400,5);
+insert into tbEscreve(idLivro,idAutor)values(900,7);
+insert into tbEscreve(idLivro,idAutor)values(800,8);
 
 select * from tbEscreve order by idLivro;
 
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(5,8,1,49.90);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(2,3,5,400.00);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(8,9,1,36.83);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(10,6,1,32.90);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(1,2,1,50.00);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(3,4,1,41.99);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(7,5,1,49.90);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(4,10,1,49.90);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(6,1,1,33.92);
-insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(9,7,1,26.09);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(5,800,1,49.90);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(2,300,5,250.00);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(8,900,3,270.00);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(10,600,2,49.98);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(1,200,4,104.36);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(3,400,1,36.83);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(7,500,1,36.83);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(4,100,1,49.90);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(6,1000,1,33.92);
+insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(9,700,2,83.98);
 
 select distinct subtotal from tbItensDaVenda;
 
-update tbGenero set descricao = 'Mangá' where idGenero = 6;
-update tbGenero set descricao = 'HQ' where idGenero =7;
-update tbGenero set descricao = 'Comédia' where idGenero = 8;
-update tbGenero set descricao = 'Fatos reais' where idGenero = 9;
-update tbGenero set descricao = 'Ficção Científica' where idGenero = 10;
+update tbItensDaVenda set subtotal = subtotal * 0.90 where subtotal > 200.00;
 
-select * from tbGenero order by idGenero asc;
-
-update tbAutor set nome = 'Jeph Loeb', email = 'loeb@hotmail.com.br' where idAutor = 1;
-update tbAutor set nome = 'Akimi Yoshida', email = 'akimi@gmail.com.br' where idAutor = 2;
-update tbAutor set nome = 'Beth OLeary', email = 'beth@hotmail.com.br' where idAutor = 3;
-update tbAutor set nome = 'Anthony Hinton', email = 'hinton@outlook.com.br' where idAutor = 4;
-update tbAutor set nome = 'James Dashner', email = 'james@gmail.com.br' where idAutor = 5;
-
-select * from tbAutor order by idAutor asc;
-
-update tbCliente set nome = 'Marcelo Barbosa', telefone = '(95)98753-1598' where idCliente = 2;
-update tbCliente set nome = 'Mariana Alves', telefone = '(48)90971-1533' where idCliente = 4;
-update tbCliente set nome = 'Bianca Andrade', telefone = '(51)92596-1290' where idCliente = 6;
-update tbCliente set nome = 'Solange Lopes', telefone = '(27)93407-4327' where idCliente = 8;
-update tbCliente set nome = 'Pedro Bial', telefone = '(11)96783-3579' where idCliente = 10;
-
-select * from tbCliente where nome like '%a%';
-
-update tbLivro set titulo = 'Banana Fish', preco = 28.99 where idGenero = 5;
-update tbLivro set titulo = 'Batman', preco = 98.97 where idGenero = 6;
-update tbLivro set titulo = 'A troca', preco = 36.99 where idGenero = 7;
-update tbLivro set titulo = 'O sol ainda brilha', preco = 31.99 where idGenero = 8;
-update tbLivro set titulo = 'Maze Runner: correr ou morrer', preco = 47.92 where idGenero = 9;
-
-select * from tbLivro;
-
-update tbVenda set data = '2018/04/12' where idVenda = 2;
-update tbVenda set data = '2021/09/14' where idVenda = 7;
-update tbVenda set data = '2023/05/15' where idVenda = 1;
-update tbVenda set data = '2022/06/01' where idVenda = 3;
-update tbVenda set data = '2023/08/22' where idVenda = 5;
-
-select * from tbVenda;
-
-update tbEscreve set idAutor = 1 where idLivro = 9;
-update tbEscreve set idAutor = 2 where idLivro = 5;
-update tbEscreve set idAutor = 3 where idLivro = 7;
-update tbEscreve set idAutor = 4 where idLivro = 8;
-update tbEscreve set idAutor = 5 where idLivro = 9;
-
-select * from tbEscreve;
+select * from tbItensDaVenda order by idVenda asc;
