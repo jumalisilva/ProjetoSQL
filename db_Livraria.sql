@@ -126,7 +126,7 @@ insert into tbVenda(idVenda,idCliente,data,total)values(6,3,'2023/07/10',82.90);
 insert into tbVenda(idVenda,idCliente,data,total)values(5,1,'2023/08/09',49.90);
 insert into tbVenda(idVenda,idCliente,data,total)values(1,2,'2023/06/12',37.90);
 insert into tbVenda(idVenda,idCliente,data,total)values(3,9,'2023/08/19',41.58);
-insert into tbVenda(idVenda,idCliente,data,total)values(8,4,'12/07/2023',24.99);
+insert into tbVenda(idVenda,idCliente,data,total)values(8,4,'2023/07/12',24.99);
 insert into tbVenda(idVenda,idCliente,data,total)values(9,6,'2023/06/03',69.90);
 insert into tbVenda(idVenda,idCliente,data,total)values(2,7,'2023/08/22',49.90);
 
@@ -161,3 +161,11 @@ select distinct subtotal from tbItensDaVenda;
 update tbItensDaVenda set subtotal = subtotal * 0.90 where subtotal > 200.00;
 
 select * from tbItensDaVenda order by idVenda asc;
+
+update tbVenda set data = '2022/09/29' where idVenda = 9;
+
+select * from tbVenda;
+
+update tbLivro set preco = 54.99, estoque = 70 where idLivro = 900;
+
+select distinct idLivro, idGenero, titulo, preco, estoque
