@@ -159,13 +159,37 @@ insert into tbItensDaVenda(idVenda,idLivro,qtd,subtotal)values(9,700,2,83.98);
 select distinct subtotal from tbItensDaVenda;
 
 update tbItensDaVenda set subtotal = subtotal * 0.90 where subtotal > 200.00;
-
 select * from tbItensDaVenda order by idVenda asc;
 
 update tbVenda set data = '2022/09/29' where idVenda = 9;
-
 select * from tbVenda;
 
 update tbLivro set preco = 54.99, estoque = 70 where idLivro = 900;
+select distinct idLivro, idGenero, titulo, preco, estoque from tbLivro;
 
-select distinct idLivro, idGenero, titulo, preco, estoque
+update tbCliente set nome = 'Caio Pereira', telefone = '(57)94423-9076' where idCliente = 2;
+select * from tbCliente;
+
+update tbAutor set nome = 'Matt Haig', email = 'haig@gmail.com.br' where idAutor = 8;
+select * from tbAutor;
+
+update tbLivro set titulo = 'A Biblioteca da Meia-noite' where idLivro = 800;
+select * from tbLivro;
+
+update tbGenero set descricao = 'Infanto-juvenil' where idGenero = 8;
+select * from tbGenero;
+
+delete from tbItensDaVenda where idVenda = 9;
+select * from tbItensDaVenda order by idVenda asc;
+
+delete from tbEscreve where idLivro = 1000;
+select * from tbEscreve order by idAutor desc;
+
+delete from tbVenda where idCliente = 6;
+select * from tbVenda order by idCliente;
+
+delete from tbAutor where idAutor = 4;
+select * from tbAutor order by idAutor asc;
+
+delete from tbCliente where idCliente = 6;
+select * from tbCliente order by idCliente asc;
