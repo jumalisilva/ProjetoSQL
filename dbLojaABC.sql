@@ -32,3 +32,9 @@ select codFunc+1 from tbFuncionarios order by codFunc desc;
 
 -- Buscar funcionários
 -- select * from tbFuncionarios where nome = "@nome";
+
+-- Alterar funcionários
+update tbFuncionarios set nome = @nome, email = @email, cpf = @cpf, dNasc = @dNasc, endereco = @endereco, cep = @cep, numero = @numero, bairro = @bairro, estado = @estado, cidade = @cidade where codFunc = @codFunc;
+
+	-- Excluindo funcionários
+	delete from tbFuncionarios where codFunc = @codFunc;
