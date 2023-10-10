@@ -29,6 +29,7 @@ foreign key(codFunc) references tbFuncionarios(codFunc));
 insert into tbUsuarios(usuario,senha,codFunc)values('admin','admin',1); 
 
 select * from tbUsuarios where usuario = 'admin' and senha = 'admin';
+
 -- insert into tbFuncionarios(nome,email,cpf,dNasc,endereco,cep,numero,bairro,estado,cidade)values();
 
 -- Busca por código
@@ -49,3 +50,7 @@ update tbFuncionarios set nome = @nome, email = @email, cpf = @cpf, dNasc = @dNa
 -- Excluindo funcionários
 delete from tbFuncionarios where codFunc = @codFunc;
 
+-- Carregando funcionários na janela de cadastro de funcionários
+select nome from tbFuncionarios order by nome asc;
+
+select usu.usuario, usu.senha, func.codFunc from tbFuncionarios as func inner join tbUsuarios as usu on func.codFunc = usu.codFunc where func.nome = 'Ciclano Pereira';
